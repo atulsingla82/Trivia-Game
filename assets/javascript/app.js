@@ -35,10 +35,10 @@ $(document).ready(function() {
     // Countdown function 
 
     function timer() {
-
+    
         count--;
         if (count == 1) {
-            clearInterval(counter);
+            clearInterval(count);
             //counter ended, do something here
             $(".gameplay").hide();
             $(".startContainer").hide();
@@ -52,8 +52,10 @@ $(document).ready(function() {
         $("#doneBtn").on("click", function() {
             $(".gameplay").hide();
             $(".finishContainer").show();
-            clearInterval(counter);
+            clearInterval(count);
             return;
+
+
 
         });
 
@@ -66,14 +68,29 @@ $(document).ready(function() {
 
     }
 
+    //    var Questions = [
+     //    {
+     //        q: "whats your name",
+     //        1: "will",
+     //        2: "bill",
+     //        3: "jill",
+     //        4: "kill"
+     //        Answer: 1
+     //    },
+
+     //    ]
+     // function placesonSreen(){
+
+     // }
+
 
     // Gameplay to determine Correct/ Incorrect / Unanswered 
-    // $('input:radio').click(function() {
-          
-          $('input').on('click', function() {
+    $('input:radio').click(function() {
 
 var Q1 = ($('input:radio[name="q1"]:checked').val());
-              if (Q1 == "1") {
+
+              console.log("78",Q1 );
+              if (Q1 === 1) {
             correctAnswers++;
             console.log(correctAnswers);
   

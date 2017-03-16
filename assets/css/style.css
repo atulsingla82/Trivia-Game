@@ -1,80 +1,74 @@
 body {
-  background: url(bart.png)no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
+    background: url(bart.png)no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-.startContainer{
-
-margin: 200px;
-float:right;
+.startContainer {
+    margin: 200px;
+    float: right;
 }
 
-.finishContainer{
-	float:right;
- margin:200px;
- background-color: transparent;
- font-family: 'Architects Daughter', cursive;
+.finishContainer {
+    float: right;
+    margin: 200px;
+    background-color: transparent;
+    font-family: 'Architects Daughter', cursive;
 }
 
 h2 {
-
-	text-align: center;
+    text-align: center;
 }
 
-h3{
-	color:red;
+h3 {
+    color:#ff5600;
 }
 
-#startBtn{
-	background-color: orange;
-	font-family: 'Gloria Hallelujah', cursive;
-	-webkit-transform: rotate(-9deg);
-    transform: rotate(-9deg);
+#startBtn {
+    background-color: hsla(53, 100%, 50%, 0.91);
+    font-family: 'Gloria Hallelujah', cursive;
+    -webkit-transform: rotate(-9deg);
+    color: black;
     float: right;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-	
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 #startImg {
-	/* Rotate div */
-   
+    /* Rotate div */
     -webkit-transform: rotate(-9deg);
-    transform: rotate(-9deg);
-	background-color: transparent;
+   
+    background-color: transparent;
     background-repeat: no-repeat;
     box-shadow: 10px 10px 5px rgba(47, 46, 46, 0.34);
 }
-#doneBtn{
-	margin-left:280px;
-	background-color: orange;
-	width: 100px;
-	font-size: 20px;
+
+#doneBtn {
+    margin-left: 50px;
+    background-color: hsla(53, 100%, 50%, 0.91);
+    width: 100px;
+    font-size: 20px;
+    color: black;
 }
 
 .retryBtn {
-	background-color: red;
-	
-	}
+    background-color: red;
+}
 
 .img-rounded {
-background-color: Transparent;
-border : none;
+    background-color: Transparent;
+    border: none;
 }
 
-.gameplay{
-	
-	font-family: 'Rancho', cursive;
-	color: black;
-	font-size: 20px;
-	
-	margin-left:200px;
-
+.gameplay {
+    font-family:'Rancho', cursive;
+    color: black;
+    font-size: 20px;
+    margin-left: 200px;
 }
+
 #countdown {
-	font-size: 40px;
-	font-family: 'Architects Daughter', cursive;
+    font-size: 40px;
+    font-family: 'Architects Daughter', cursive;
 }
