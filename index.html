@@ -1,0 +1,109 @@
+<html lang="en">
+
+<head>
+    <title>Trivia</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Gloria+Hallelujah|Rancho" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Start of the game -->
+   
+
+
+    <div class="startContainer">
+        <center>
+            <img id="startImg" src="assets/css/images.png" class="img-rounded" alt="" width="304" height="236">
+        <center>
+        <br>
+       <button  class="btn btn-success btn-lg"  id="startBtn"> Click to Begin! </button>
+        </center>
+    </div>
+    <!--  During gameplay container  -->
+    <div class="row gameplay ">
+        <div class="col-md-12 text-center">
+            <div class="container gameplay">
+               
+                <!-- Game Timer -->
+                <h2 id="countdown">
+      <span id= "timer" > </span>
+     </h2>
+                <!-- Questions & Answers  -->
+                <div class="container">
+                    <h3>Question 1 </h3>
+                    <p>What Terrace do The Simpson's live on?</p>
+                   
+                    <input type="radio" name="q1" value="1"> Evergreen Terrace &nbsp;
+                    <input  type="radio" name="q1" value="2"> Everblue Terrace &nbsp;
+                    <input type="radio" name="q1" value="3"> Everred Terrace &nbsp;
+                    <input type="radio" name="q1" value="4"> Everpink Terrace &nbsp;
+                    </div>
+                    <h3>Question 2 </h3>
+                    <p>Who repeated the 4th grade?</p>
+                   
+                    <input type="radio" name="q2" value="1"> Otto &nbsp;
+                    <input type="radio" name="q2" value="2"> Moe &nbsp;
+                    <input type="radio" name="q2" value="3"> Homer &nbsp;
+                    <input type="radio" name="q2" value="4"> Grandpa Simpson &nbsp;
+                    
+                    <h3>Question 3 </h3>
+                    <p>Which of the following words had Maggie spoken?</p>
+                   
+                    <input type="radio" name="q3" value="1"> Dada &nbsp;
+                    <input type="radio" name="q3" value="2"> Mama &nbsp;
+                    <input type="radio" name="q3" value="3"> Drink &nbsp;
+                    <input type="radio" name="q3" value="4"> Nan Night &nbsp;
+                    
+                    <h3>Question 4 </h3>
+                    <p>Where did Homer put his gun after Marge caught him with it?</p>
+                    <input type="radio" name="q4" value="1"> In Barts treehouse &nbsp;
+                    <input type="radio" name="q4" value="2"> In the fridge &nbsp;
+                    <input type="radio" name="q4" value="3"> Under the Bed &nbsp;
+                    <input type="radio" name="q4" value="4"> At Moe's &nbsp;
+                    <h3>Question 5 </h3>
+                    <p>What is Barts twin called?
+                    </p>
+                    <input type="radio" name="q5" value="1"> Dude &nbsp;
+                    <input type="radio" name="q5" value="2"> Hugo &nbsp;
+                    <input type="radio" name="q5" value="3"> Millhouse &nbsp;
+                    <input type="radio" name="q5" value="4"> He does not have a twin &nbsp;
+                    <h3>Question 6 </h3>
+                    <p>Who has tried many times to kill Bart?</p>
+                    <input type="radio" name="q6" value="1"> Sideshow Mel &nbsp;
+                    <input type="radio" name="q6" value="2"> Krusty &nbsp;
+                    <input type="radio" name="q6" value="3"> Sideshow Bob&nbsp;
+                    <input type="radio" name="q6" value="4"> Ned Flanders &nbsp;
+                    <h3>Question 7 </h3>
+                    <p>Who is the news reporter for channel six?</p>
+                    <input type="radio" name="q7" value="1"> Kent Brockman &nbsp;
+                    <input type="radio" name="q7" value="2"> Bumblebee Man &nbsp;
+                    <input type="radio" name="q7" value="3"> Krusty &nbsp;
+                    <input type="radio" name="q7" value="4"> Homer &nbsp;
+                    <h3>Question 8 </h3>
+                    <p>What is the ranch that Marge goes to called?</p>
+                    <input type="radio" name="q8" value="1"> Ranch Love &nbsp;
+                    <input type="radio" name="q8" value="2"> Ranch Rest &nbsp;
+                    <input type="radio" name="q8" value="3"> Rancho Relaxo &nbsp;
+                    <input type="radio" name="q8" value="4"> R. Relaxo &nbsp;
+                </div>
+                <br>
+               <center> <button class="btn btn-success btn-lg" id="doneBtn"> Done ! </button> </center>
+            </div>
+        </div>
+    </div>
+    <!-- End of play --> 
+    <div class="jumbotron finishContainer">
+        <h2 id="correctAnswers"> </h2>
+        <h2 id="incorrectAnswers"> </h2>
+        <h2 id="unanswered"> </h2>
+       <center> <img src="assets/css/homer.jpg" width="150" class= "btn-success btn-lg retryBtn"  type="button" value=" Retry!" onClick="window.location.reload()"> </center>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+
+</html>
