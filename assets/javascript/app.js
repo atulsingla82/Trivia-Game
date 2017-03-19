@@ -1,12 +1,13 @@
-$(document).ready(function() {
 
+ $(document).ready(function() {
 
     // timer count
     var count = 61;
     // Variables for answers
-    var correctAnswers = 0;
-    var incorrectAnswers = 0;
-    var unanswered = 0;
+    
+
+  
+
     //audio
     var audio = document.createElement("audio");
     audio.setAttribute('src', "assets/audio/simpsong.wav");
@@ -20,30 +21,33 @@ $(document).ready(function() {
 
 
     $("#startBtn").on('click', function() {
-
-    var counter = setInterval(timer, 1000); //1000 will  run it every 1 second  
-
+       
+        var counter = setInterval(timer, 1000); //1000 will  run it every 1 second  
+        
         // Hides the start div
         $(".startContainer").hide();
         $(".finishContainer").hide();
         // Shows the main div
         $(".gameplay").show();
         timer();
+        return;
 
-   });
+    });
 
     // Countdown function 
 
     function timer() {
-    
+
         count--;
         if (count == 1) {
+
             clearInterval(count);
+           
             //counter ended, do something here
             $(".gameplay").hide();
             $(".startContainer").hide();
             $(".finishContainer").show();
-            return;
+           
         }
         $('#countdown').html(" Time remaining: " + count + " seconds ");
         //code showing the number of seconds 
@@ -59,8 +63,8 @@ $(document).ready(function() {
 
         });
 
-        if (count == 0) {
-
+        if (count == -1) {
+           
 
             $(".gameplay").hide();
             $(".finishContainer").show();
@@ -68,190 +72,196 @@ $(document).ready(function() {
 
     }
 
-    //    var Questions = [
-     //    {
-     //        q: "whats your name",
-     //        1: "will",
-     //        2: "bill",
-     //        3: "jill",
-     //        4: "kill"
-     //        Answer: 1
-     //    },
-
-     //    ]
-     // function placesonSreen(){
-
-     // }
 
 
     // Gameplay to determine Correct/ Incorrect / Unanswered 
-    $('input:radio').click(function() {
+   
+       $('input:radio').click(function() {
+        
+        // function gamePlay() {
 
-var Q1 = ($('input:radio[name="q1"]:checked').val());
+        var correct= 0;
+        var incorrect= 0;
+        var unanswered = 0;    
+       
+        var a1 = ($('input:radio[name="q1"]:checked').val());
+        var a2 = ($('input:radio[name="q2"]:checked').val());
+        var a3 = ($('input:radio[name="q3"]:checked').val());
+        var a4 = ($('input:radio[name="q4"]:checked').val());
+        var a5 = ($('input:radio[name="q5"]:checked').val());
+        var a6 = ($('input:radio[name="q6"]:checked').val());
+        var a7 = ($('input:radio[name="q7"]:checked').val());
+        var a8 = ($('input:radio[name="q8"]:checked').val());
 
-              console.log("78",Q1 );
-              if (Q1 === 1) {
-            correctAnswers++;
-            console.log(correctAnswers);
-  
-    
-        } else if ( Q1 === undefined) {
+
+
+
+        // IF a1== BKLAJDSF
+            // else if
+            // else SDFdsafasdf
+
+        // IF a2 == bladfsa
+
+        // console.log(a1);
+        // console.log(a2);
+        // console.log(a3);
+        // console.log(a4);
+        // console.log(a5);
+
+        for (var i=0; i<correct.length; i++);
+
+        // QUESTION 1
+        // =================================
+         
+       
+        if (a1 == undefined) {
             unanswered++;
-
             console.log(unanswered);
-        } else {
-
-            incorrectAnswers++;
-
-            console.log(incorrectAnswers);
         }
 
-
-var Q2 = ($('input:radio[name=q2]:checked').val());
-
-        if (Q2 == "1") {
-
-            correctAnswers++;
-            console.log(unanswered);
-
-        } else if (typeof Q2 == undefined) {
-            unanswered++;
-
-            console.log(correctAnswers);
-        } else {
-
-            incorrectAnswers++;
-
-            console.log(incorrectAnswers);
+        else if (a1 == "Evergreen Terrace" ){
+           correct++;
+            console.log(correct);
         }
 
+        else {
+            incorrect++
+            console.log(incorrect);
+       }
 
-var Q3 = ($('input:radio[name=q3]:checked').val());
+       // QUESTION 2
+       // =================================
 
-
-
-        if (Q3 == "1") {
-            correctAnswers++;
-            console.log(unanswered);
-
-        } else if (Q3 == undefined) {
-            unanswered++;
-
-            console.log(correctAnswers);
-        } else {
-
-            incorrectAnswers++;
-
-            console.log(incorrectAnswers);
-        }
-
-
-var Q4 = ($('input:radio[name=q4]:checked').val());
-
-
-
-        if (Q4 == undefined) {
+       if (a2 == undefined) {
             unanswered++;
             console.log(unanswered);
 
-        } else if (Q4 == "2") {
-            correctAnswers++;
+      }
+      else if (a2 == "Otto"){
+           correct++;
+         console.log(correct);
+       }
+        else {
+            incorrect++
+            console.log(incorrect);
+       }
+        // QUESTION 3
+       // =================================
 
-            console.log(correctAnswers);
-        } else {
-
-            incorrectAnswers++;
-
-            console.log(incorrectAnswers);
-        }
-
-var Q5 = ($('input:radio[name=q5]:checked').val());
-
-
-
-        if (Q5 == undefined) {
+       if (a3 == undefined) {
             unanswered++;
             console.log(unanswered);
 
-        } else if (Q5 == "2") {
-            correctAnswers++;
+      }   
+       else if (a3 == "Dada")
+       {
+           correct++;
+         console.log(correct);
+       }
+        else {
+            incorrect++
+            console.log(incorrect);
+       }
 
-            console.log(correctAnswers);
-        } else {
+     // QUESTION 4
+       // =================================
 
-            incorrectAnswers++;
-
-            console.log(incorrectAnswers);
-        }
-
-var Q6 = ($('input:radio[name=q6]:checked').val());
-
-
-
-        if (Q6 == undefined) {
+      if (a4 == undefined) {
             unanswered++;
             console.log(unanswered);
 
-        } else if (Q6 == "2") {
-            correctAnswers++;
+      }   
+      else  if (a4  == "In the fridge")
+        {
+           correct++;
+         console.log(correct);
+       }
+        else {
+            incorrect++
+            console.log(incorrect);
+       }
 
-            console.log(correctAnswers);
-        } else {
+       // QUESTION 5
+       // =================================
 
-            incorrectAnswers++;
-
-            console.log(incorrectAnswers);
-        }
-
-var Q7 = ($('input:radio[name=q7]:checked').val());
-
-
-
-        if (Q7 == undefined) {
+      if (a5 == undefined) {
             unanswered++;
             console.log(unanswered);
 
-        } else if (Q7 == "2") {
-            correctAnswers++;
+      }   
+     else   if (a5  == "Hugo"){
+           correct++;
+         console.log(correct);
+       }
+        else {
+            incorrect++
+            console.log(incorrect);
+       }
 
-            console.log(correctAnswers);
-        } else {
+       // QUESTION 6
+       // =================================
 
-            incorrectAnswers++;
-
-            console.log(incorrectAnswers);
-        }
-var Q8 = ($('input:radio[name=q8]:checked').val());
-
-
-
-        if (Q8 == undefined) {
+      if (a6 == undefined) {
             unanswered++;
             console.log(unanswered);
 
-        } else if (Q8 == "2") {
-            correctAnswers++;
+      }   
+     else   if (a6  == "Sideshow Mel"){
+           correct++;
+         console.log(correct);
+       }
+        else {
+            incorrect++
+            console.log(incorrect);
+       }
 
-            console.log(correctAnswers);
-        } else {
+       // QUESTION 7
+       // =================================
 
-            incorrectAnswers++;
+      if (a7 == undefined) {
+            unanswered++;
+            console.log(unanswered);
 
-            console.log(incorrectAnswers);
-        }
+      }   
+      else  if (a7  == "Kent Brockman"){
+           correct++;
+         console.log(correct);
+       }
+        else {
+            incorrect++
+            console.log(incorrect);
+       }
+      
+
+      // QUESTION 8
+       // =================================
+
+      if (a8 == undefined) {
+            unanswered++;
+            console.log(unanswered);
+
+      }   
+     else   if (a8  == "Rancho Relaxo"){
+           correct++;
+         console.log(correct);
+       }
+        else {
+            incorrect++
+            console.log(incorrect);
+       }
+        
 
 
-        $('#correctAnswers').html("Correct Answers : " + correctAnswers);
-        $('#incorrectAnswers').html("Incorrect Answers : " + incorrectAnswers);
+        $('#correctAnswers').html("Correct Answers : " + correct);
+        $('#incorrectAnswers').html("Incorrect Answers : " + incorrect);
         $('#unanswered').html("Unanswered : " + unanswered);
+       
+   
+       
 
-
-
-
-    });
-
-
-
+// }
+// gamePlay();
+ });
 
 
 });
