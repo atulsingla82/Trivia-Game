@@ -1,24 +1,26 @@
 $(document).ready(function() {
 
-    // timer count
+    // timer count ==============================
+
     var count = 61;
-   
+    var correct = 0;
+    var incorrect = 0;
+    var unanswered = 0;
 
 
+    //audio ======================================
 
-
-    //audio
     var audio = document.createElement("audio");
     audio.setAttribute('src', "assets/audio/simpsong.wav");
 
 
-    //Start the game with hidden divs
+    //Start the game with hidden divs=========================
     audio.play();
 
     $(".gameplay").hide();
     $(".finishContainer").hide();
 
-
+    // Functions with start button is clicked =====================
     $("#startBtn").on('click', function() {
 
         var counter = setInterval(timer, 1000); //1000 will  run it every 1 second  
@@ -33,12 +35,14 @@ $(document).ready(function() {
 
     });
 
-    // Countdown function 
+    // Countdown function ================================================
 
     function timer() {
 
+
+
         count--;
-        if (count == 1) {
+        if (count == 0) {
 
             clearInterval(count);
 
@@ -46,6 +50,11 @@ $(document).ready(function() {
             $(".gameplay").hide();
             $(".startContainer").hide();
             $(".finishContainer").show();
+
+            $('#correctAnswers').html("Correct Answers : " + correct);
+            $('#incorrectAnswers').html("Incorrect Answers : " + incorrect);
+            $('#unanswered').html("Unanswered : " + unanswered);
+
 
         }
         $('#countdown').html(" Time remaining: " + count + " seconds ");
@@ -56,15 +65,17 @@ $(document).ready(function() {
             $(".gameplay").hide();
             $(".finishContainer").show();
             clearInterval(count);
-            
-            return;
 
-     });
-       
+
+
+
+
+        });
+
 
     }
-     
-    
+
+
 
 
 
@@ -77,6 +88,8 @@ $(document).ready(function() {
         var correct = 0;
         var incorrect = 0;
         var unanswered = 0;
+
+
 
         var a1 = ($('input:radio[name="q1"]:checked').val());
         var a2 = ($('input:radio[name="q2"]:checked').val());
@@ -118,7 +131,7 @@ $(document).ready(function() {
             // console.log(correct);
         } else {
             incorrect++
-            console.log(incorrect);
+            // console.log(incorrect);
         }
         // QUESTION 3
         // =================================
@@ -211,21 +224,17 @@ $(document).ready(function() {
             // console.log(incorrect);
         }
 
-        if (count == -1) {
 
-
-            $(".gameplay").hide();
-            $(".finishContainer").show();
-        }
         $('#correctAnswers').html("Correct Answers : " + correct);
         $('#incorrectAnswers').html("Incorrect Answers : " + incorrect);
         $('#unanswered').html("Unanswered : " + unanswered);
 
 
 
-   
+
 
     });
-  
+
+
 
 });
