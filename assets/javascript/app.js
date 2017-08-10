@@ -103,7 +103,8 @@ $(document).ready(function() {
 
 
         for (var i = 0; i < correct.length; i++);
-
+        for (var j = 0; j < incorrect.length; j++);
+           
         // QUESTION 1
         // =================================
 
