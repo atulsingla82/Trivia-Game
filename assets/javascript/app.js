@@ -3,9 +3,7 @@ $(document).ready(function() {
     // timer count ==============================
 
     var count = 61;
-    var correct = 0;
-    var incorrect = 0;
-    var unanswered = 0;
+    
 
 
     //audio ======================================
@@ -39,8 +37,6 @@ $(document).ready(function() {
 
     function timer() {
 
-
-
         count--;
         if (count == 0) {
 
@@ -66,17 +62,8 @@ $(document).ready(function() {
             $(".finishContainer").show();
             clearInterval(count);
 
-
-
-
-
         });
-
-
     }
-
-
-
 
 
     // Gameplay to determine Correct/ Incorrect / Unanswered 
@@ -225,17 +212,8 @@ $(document).ready(function() {
             // console.log(incorrect);
         }
 
-
         $('#correctAnswers').html("Correct Answers : " + correct);
         $('#incorrectAnswers').html("Incorrect Answers : " + incorrect);
         $('#unanswered').html("Unanswered : " + unanswered);
-
-
-
-
-
-    });
-
-
-
+ });
 });
